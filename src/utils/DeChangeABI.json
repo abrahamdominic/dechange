@@ -1,18 +1,30 @@
 {
   "abi": [
     {
-      "constant": true,
-      "inputs": [],
-      "name": "getSomething",
-      "outputs": [
+
+      "inputs": [
         {
-          "name": "",
-          "type": "string"
+          "internalType": "address",
+          "name": "_smartWallet",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_baseNames",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_sbtAddress",
+          "type": "address"
         }
       ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
+      "name": "",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+      
     }
+    
   ]
 }
