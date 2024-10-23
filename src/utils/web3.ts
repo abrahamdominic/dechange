@@ -1,8 +1,8 @@
-import Web3 from 'web3';
+import Web3, { AbiItem } from 'web3';
 
-// Initialize Web3 with Infura URL
-const infuraUrl = 'https://mainnet.infura.io/v3/4eacd1e0bf7445f5a5fb541582887660';
-const web3 = new Web3(new Web3.providers.HttpProvider(infuraUrl));
+// Initialize Web3 with Alchemy URL
+const alchemyUrl = 'https://base-sepolia.g.alchemy.com/v2/UBDX_6E93vJ7hYR8RV4Ike2D3ulRt-I5';
+const web3 = new Web3(new Web3.providers.HttpProvider(alchemyUrl));
 
 // Define contract addresses
 const deChangeAddress = '0xbA43C9d6D80b92AB28eac94D24B923C18eE48dB8';
@@ -13,8 +13,8 @@ import deChangeABI from './DeChangeABI.json';
 import soulBoundTokenABI from './SoulBoundTokenABI.json';
 
 // Initialize contracts
-export const deChangeContract = new web3.eth.Contract(deChangeABI as AbiItem[], deChangeAddress);
-export const soulBoundTokenContract = new web3.eth.Contract(soulBoundTokenABI as AbiItem[], soulBoundTokenAddress);
+export const deChangeContract = new web3.eth.Contract(deChangeABI as unknown as AbiItem[], deChangeAddress);
+export const soulBoundTokenContract = new web3.eth.Contract(soulBoundTokenABI as unknown as AbiItem[], soulBoundTokenAddress);
 
 // Export Web3 instance
 export default web3;
